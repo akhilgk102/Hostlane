@@ -34,13 +34,58 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- <style>
-    .slider_section {
-      background-color: black;
-      color: white;
-    }
-  </style> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    .button {
+    position: relative;
+    padding: 10px 40px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: black;
+    background: white;
+    border: 2px solid black;
+    border-radius: 6px; /* Slightly curved corners */
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #582fd7;
+    transition: left 0.4s;
+    z-index: 0;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.button:hover {
+    color: white;
+}
+
+/* Ensuring the pseudo-element is behind the text */
+.button::before {
+    z-index: -1;
+}
+
+img {
+  pointer-events: none;
+  /* user-drag: none; */
+  -webkit-user-drag: none;
+}
+
+  </style>
 
 </head>
 
@@ -68,7 +113,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home </a>
+                  <a class="nav-link " href="index.html">Home </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
@@ -106,9 +151,9 @@
                     <p>
                       Need a website? We create fast, beautiful, and easy-to-use websites for your business. Get yours today with Hostlane Technolab
                     </p>
-                    <a href="" class="">
-                      Read More
-                    </a>
+                    <button href="" class="button">
+                      Contact us
+                    </button>
                   </div>
                 </div>
                 <div class="col-md-5 offset-md-1">
@@ -184,70 +229,73 @@
     <!-- end slider section -->
   </div>
 
+  
+
 
   <!-- service section -->
   <section class="service_section layout_padding">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          Our Services
-        </h2>
+      <div class="heading_container text-center">
+        <h2>Our Services</h2>
       </div>
-
-      <div class="service_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/server1.png" class="img1" alt="">
-            <img src="images/server2.png" class="img2" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Web Hosting
-            </h5>
-            <p>
-              Provides the infrastructure to store and serve websites online, ensuring accessibility, security, and
-              performance.
-            </p>
+  
+      <div class="service_container row">
+        <div class="col-md-4"data-aos="fade-right">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/hosting.png" class="img-fluid " alt="Web Hosting"loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;">
+                Web Hosting
+              </h5>
+              <p class="text-black">Reliable infrastructure for storing and serving websites with top-notch security and performance.</p>
+            </div>
           </div>
         </div>
-        <div class="box active">
-          <div class="img-box">
-            <img src="images/s-2.png" class="img1" alt="">
-            <img src="images/s-2-color.png" class="img2" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Web Development
-
-            </h5>
-            <p class="mt-4">
-              We offers professional web development services, delivering responsive, secure, and user-friendly websites
-              tailored to your needs
-            </p>
+        
+        <div class="col-md-4"data-aos="fade-up">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/web.jpg" class="img-fluid " alt="Web Development"loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;" >Web Development</h5>
+              <p class="">Professional and responsive web development services tailored to your business needs.</p>
+            </div>
           </div>
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/s-3.png" class="img1" alt="">
-            <img src="images/s-3-color.png" class="img2" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              College Projects + Documentation
-            </h5>
-            <p>
-              We offer college project development with complete documentation, ensuring quality and industry standards.
-            </p>
+        
+        <div class="col-md-4"data-aos="fade-left">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/projects.png" class="img-fluid " alt="College Projects" loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;">College Projects</h5>
+              <p class="">Complete project development and documentation services following industry standards.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
+  
+      <div class="btn-box text-center mt-4">
+        <a href="" class="btn btn-primary shadow-sm">Read More</a>
       </div>
     </div>
   </section>
+
+  <style>
+        .service_box {
+      transition: all 0.3s ease-in-out;
+      border: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    .service_box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  
   <!-- end service section -->
 
   <!-- about section -->
@@ -298,9 +346,7 @@
         <h2>
           Portfolio
         </h2>
-        <p>
-          There are many variations of passages of Lorem Ipsum available, but the majority
-        </p>
+        <p>Explore some of our best projects and creative works.</p>
       </div>
 
       <div class="layout_padding2-top">
@@ -572,5 +618,13 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
 </body>
+
+<script>
+  AOS.init();
+
+    document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+</script>
 
 </html>
