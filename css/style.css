@@ -2,6 +2,8 @@ body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .layout_padding {
@@ -61,7 +63,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../images/hero-bg-dark.png);
+  background-image: url(../images/hero-bg-dark2.png);
   background-size: cover;
   background-position: bottom;
 }
