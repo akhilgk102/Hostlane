@@ -40,58 +40,58 @@
 
   <style>
     .button {
-    position: relative;
-    padding: 10px 40px;
-    font-size: 16px;
-    /* font-weight: bold; */
-    color: black;
-    background: white;
-    border: 2px solid black;
-    border-radius: 6px; /* Slightly curved corners */
-    cursor: pointer;
-    overflow: hidden;
-    transition: color 0.4s;
-    z-index: 1;
-}
+      position: relative;
+      padding: 10px 40px;
+      font-size: 16px;
+      /* font-weight: bold; */
+      color: black;
+      background: white;
+      border: 2px solid black;
+      border-radius: 6px;
+      /* Slightly curved corners */
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.4s;
+      z-index: 1;
+    }
 
-.button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #582fd7;
-    transition: left 0.4s;
-    z-index: 0;
-}
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #582fd7;
+      transition: left 0.4s;
+      z-index: 0;
+    }
 
-.button:hover::before {
-    left: 0;
-}
+    .button:hover::before {
+      left: 0;
+    }
 
-.button:hover {
-    color: white;
-}
+    .button:hover {
+      color: white;
+    }
 
-/* Ensuring the pseudo-element is behind the text */
-.button::before {
-    z-index: -1;
-}
+    /* Ensuring the pseudo-element is behind the text */
+    .button::before {
+      z-index: -1;
+    }
 
-img {
-  pointer-events: none;
-  /* user-drag: none; */
-  -webkit-user-drag: none;
-}
-
+    img {
+      pointer-events: none;
+      /* user-drag: none; */
+      -webkit-user-drag: none;
+    }
   </style>
 
 </head>
 
 <body>
 
-  <div class="hero_area">
+  <div class="hero_area " style="background-color: rgb(0, 0, 0);">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -135,7 +135,7 @@ img {
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section ">
+    <section class=" slider_section  ">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
 
@@ -149,7 +149,8 @@ img {
                       BETTER <span>WEB APPLICATIONS</span>
                     </h1>
                     <p>
-                      Need a website? We create fast, beautiful, and easy-to-use websites for your business. Get yours today with Hostlane Technolab
+                      Need a website? We create fast, beautiful, and easy-to-use websites for your business. Get yours
+                      today with Hostlane Technolab
                     </p>
                     <button href="" class="button">
                       Contact us
@@ -175,7 +176,8 @@ img {
                       BETTER <span>COLLEGE PROJECTS</span>
                     </h1>
                     <p>
-                       College project? No worries! 🎯 Hostlane Technolab delivers <br>high-quality, easy-to-understand college projects with full guidance. Get yours today!
+                      College project? No worries! 🎯 Hostlane Technolab delivers high-quality, easy-to-understand
+                      college projects with full guidance. Get yours today!
                     </p>
                     <button href="" class="button">
                       Contact us
@@ -200,7 +202,8 @@ img {
                       BETTER <span>UI/UX</span>
                     </h1>
                     <p>
-                      Good design is good business! Elevate your brand with our expert UI/UX design solutions. Hostlane Technolab – where creativity meets functionality!
+                      Good design is good business! Elevate your brand with our expert UI/UX design solutions. Hostlane
+                      Technolab – where creativity meets functionality!
                     </p>
                     <button href="" class="button">
                       Contact us
@@ -229,74 +232,6 @@ img {
     <!-- end slider section -->
   </div>
 
-  
-
-
-  <!-- service section -->
-  <section class="service_section layout_padding">
-    <div class="container">
-      <div class="heading_container text-center">
-        <h2>Our Services</h2>
-      </div>
-  
-      <div class="service_container row">
-        <div class="col-md-4"data-aos="fade-right">
-          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
-            <div class="img-box mb-3">
-              <img src="images/hosting.png" class="img-fluid " alt="Web Hosting"loading="lazy">
-            </div>
-            <div class="detail-box">
-              <h5 style="font-weight: 600;">
-                Web Hosting
-              </h5>
-              <p class="text-black">Reliable infrastructure for storing and serving websites with top-notch security and performance.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4"data-aos="fade-up">
-          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
-            <div class="img-box mb-3">
-              <img src="images/web.jpg" class="img-fluid " alt="Web Development"loading="lazy">
-            </div>
-            <div class="detail-box">
-              <h5 style="font-weight: 600;" >Web Development</h5>
-              <p class="">Professional and responsive web development services tailored to your business needs.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4"data-aos="fade-left">
-          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
-            <div class="img-box mb-3">
-              <img src="images/projects.png" class="img-fluid " alt="College Projects" loading="lazy">
-            </div>
-            <div class="detail-box">
-              <h5 style="font-weight: 600;">College Projects</h5>
-              <p class="">Complete project development and documentation services following industry standards.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="btn-box text-center mt-4">
-        <a href="" class="btn btn-primary shadow-sm">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <style>
-        .service_box {
-      transition: all 0.3s ease-in-out;
-      border: 2px solid rgba(0, 0, 0, 0.05);
-    }
-    .service_box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-  </style>
-  
-  <!-- end service section -->
 
   <!-- about section -->
   <section class="about_section layout_padding">
@@ -336,17 +271,86 @@ img {
   <!-- end about section -->
 
 
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container text-center">
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="service_container row">
+        <div class="col-md-4" data-aos="fade-right">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/hosting.png" class="img-fluid " alt="Web Hosting" loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;">
+                Web Hosting
+              </h5>
+              <p class="text-black">Reliable infrastructure for storing and serving websites with top-notch security and
+                performance.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/web.jpg" class="img-fluid " alt="Web Development" loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;">Web Development</h5>
+              <p class="">Professional and responsive web development services tailored to your business needs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-left">
+          <div class="service_box text-center shadow-lg  rounded-lg bg-white">
+            <div class="img-box mb-3">
+              <img src="images/projects.png" class="img-fluid " alt="College Projects" loading="lazy">
+            </div>
+            <div class="detail-box">
+              <h5 style="font-weight: 600;">College Projects</h5>
+              <p class="">Complete project development and documentation services following industry standards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-box text-center mt-4">
+        <a href="" class="btn btn-primary shadow-sm">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .service_box {
+      transition: all 0.3s ease-in-out;
+      border: 2px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .service_box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+
+  <!-- end service section -->
+
+
 
 
   <!-- portfolio section -->
 
-  <section class="portfolio_section layout_padding">
+  <section class="portfolio_section layout_padding bg-light">
     <div class="container">
       <div class="heading_container">
         <h2>
           Portfolio
         </h2>
-<p>Explore some of our best projects and creative works.</p>
+        <p>Explore some of our best projects and creative works.</p>
       </div>
 
       <div class="layout_padding2-top">
@@ -369,7 +373,7 @@ img {
           </div>
           <div class="col-md-4 col-sm-6">
             <div class="img-box">
-              <img src="images/cyberspy.png" alt="">
+              <img src="images/cyberspy2.png" alt="">
               <a href="">
                 <img src="images/link.png" alt="">
               </a>
@@ -415,7 +419,7 @@ img {
 
   <!-- contact section -->
 
-  <section class="contact_section layout_padding-bottom">
+  <section class="contact_section layout_padding-bottom mt-5">
     <div class="container">
 
       <div class="heading_container">
@@ -458,7 +462,7 @@ img {
 
   <!-- end contact section -->
 
-  <div class="footer_bg">
+  <div class="footer_bg " style="background-color: black;">
 
 
 
@@ -472,9 +476,9 @@ img {
                 Office hours
               </h5>
               <p>
-                <div>Mon-Sat 9:00 - 5:00 </div>
+              <div>Mon-Sat 9:00 - 5:00 </div>
 
-                <div class="mt-2">(24x7 Special Support)</div>
+              <div class="mt-2">(24x7 Special Support)</div>
               </p>
             </div>
           </div>
@@ -489,11 +493,15 @@ img {
 
             .contact-link {
               text-decoration: none;
-              color: inherit;
+              color: white;
+              /* Default color */
+              transition: color 0.3s ease-in-out;
             }
 
-            .contact-link:hover {
-              color: gray;
+            .contact-link:hover,
+            .contact-link:focus {
+              color: gray !important;
+              /* Ensure it stays gray */
             }
           </style>
 
@@ -501,7 +509,7 @@ img {
             <div class="info_contact">
               <h5>About Shop</h5>
 
-              <a href="#" class="contact-link d-flex align-items-center mb-3">
+              <a href="https://maps.app.goo.gl/64YBf7LZHAvXwW9A8" class="contact-link d-flex align-items-center mb-3">
                 <i class="bi bi-geo-alt-fill large-icon me-2"></i>
                 <p class="ml-2 mb-2">Vandanam, Alappuzha</p>
               </a>
@@ -522,15 +530,14 @@ img {
 
           <style>
             .contact-link {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease-in-out;
-}
+              text-decoration: none;
+              color: inherit;
+              transition: color 0.3s ease-in-out;
+            }
 
-.contact-link:hover {
-  color: gray;
-}
-
+            .contact-link:hover {
+              color: gray;
+            }
           </style>
 
 
@@ -545,7 +552,7 @@ img {
               <a href="#" class="contact-link d-block mt-4">UI/UX</a>
             </div>
           </div>
-          
+
 
           <div class="col-md-3 d-flex d-md-block flex-column align-items-center text-center text-md-left ">
             <div class="info_form ">
@@ -553,8 +560,8 @@ img {
                 Newsletter
               </h5>
               <form action="">
-                <input type="email" placeholder="Enter your email">
-                <button>
+                <input type="email" placeholder="Enter your email" class=form-control>
+                <button class="rounded">
                   Subscribe
                 </button>
               </form>
@@ -622,7 +629,7 @@ img {
 <script>
   AOS.init();
 
-    document.addEventListener("contextmenu", function(event) {
+  document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
   });
 </script>

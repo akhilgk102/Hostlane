@@ -63,7 +63,7 @@ body,html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../images/hero-bg-dark2.png);
+  /* background-image: url(../images/hero-bg-dark2.png); */
   background-size: cover;
   background-position: bottom;
 }
@@ -593,14 +593,14 @@ a:focus {
 
 /* end contact section */
 .footer_bg {
-  background-image: url(../images/footer-bg.png);
+  /* background-image: url(../images/footer-bg2.png); */
   background-size: cover;
   background-position: top;
 }
 
 .info_section {
   color: #ffffff;
-  padding-top: 195px;
+  padding-top: 105px;
   padding-bottom: 75px;
 }
 

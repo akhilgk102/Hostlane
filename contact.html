@@ -124,7 +124,7 @@
 
   <!-- end contact section -->
 
-  <div class="footer_bg">
+  <div class="footer_bg " style="background-color: black;">
 
 
 
@@ -138,9 +138,9 @@
                 Office hours
               </h5>
               <p>
-                <div>Mon-Sat 9:00 - 5:00 </div>
+              <div>Mon-Sat 9:00 - 5:00 </div>
 
-                <div class="mt-2">(24x7 Special Support)</div>
+              <div class="mt-2">(24x7 Special Support)</div>
               </p>
             </div>
           </div>
@@ -155,11 +155,15 @@
 
             .contact-link {
               text-decoration: none;
-              color: inherit;
+              color: white;
+              /* Default color */
+              transition: color 0.3s ease-in-out;
             }
 
-            .contact-link:hover {
-              color: gray;
+            .contact-link:hover,
+            .contact-link:focus {
+              color: gray !important;
+              /* Ensure it stays gray */
             }
           </style>
 
@@ -167,7 +171,7 @@
             <div class="info_contact">
               <h5>About Shop</h5>
 
-              <a href="#" class="contact-link d-flex align-items-center mb-3">
+              <a href="https://maps.app.goo.gl/64YBf7LZHAvXwW9A8" class="contact-link d-flex align-items-center mb-3">
                 <i class="bi bi-geo-alt-fill large-icon me-2"></i>
                 <p class="ml-2 mb-2">Vandanam, Alappuzha</p>
               </a>
@@ -188,15 +192,14 @@
 
           <style>
             .contact-link {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease-in-out;
-}
+              text-decoration: none;
+              color: inherit;
+              transition: color 0.3s ease-in-out;
+            }
 
-.contact-link:hover {
-  color: gray;
-}
-
+            .contact-link:hover {
+              color: gray;
+            }
           </style>
 
 
@@ -211,7 +214,7 @@
               <a href="#" class="contact-link d-block mt-4">UI/UX</a>
             </div>
           </div>
-          
+
 
           <div class="col-md-3 d-flex d-md-block flex-column align-items-center text-center text-md-left ">
             <div class="info_form ">
@@ -219,8 +222,8 @@
                 Newsletter
               </h5>
               <form action="">
-                <input type="email" placeholder="Enter your email">
-                <button>
+                <input type="email" placeholder="Enter your email" class=form-control>
+                <button class="rounded">
                   Subscribe
                 </button>
               </form>
