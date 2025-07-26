@@ -29,7 +29,56 @@
 <script src="blob:https://unifato.com/e3be658c-3deb-4705-954b-069489758228"></script></head>
 <body class="body-bg1" style="" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 
+  <style>
+    .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
 
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .content {
+            display: none;
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        .content.show {
+            display: block;
+        }
+    /* Prevent horizontal overflow on all elements */
+  </style>
+
+<div class="preloader" id="preloader">
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/adf2f117-7afe-401c-a35f-2b4b3320e2a0/5WznAnNzxn.lottie" style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+</div>
+
+      <script>
+        // Hide preloader after page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const preloader = document.getElementById('preloader');
+                const content = document.getElementById('content');
+                
+                preloader.classList.add('hidden');
+                content.classList.add('show');
+            }, 3000 ); // Adjust delay as needed (1000ms = 1 second)
+        });
+    </script>
 
 
 <div class="procus-cursor" style="transform: translate3d(calc(-50% + 1310px), calc(-50% + 5px), 0px);"></div>
